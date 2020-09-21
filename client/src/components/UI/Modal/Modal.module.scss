@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 30px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.25) translateY(-50%);
+  transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+
+  .modal__overlay {
+    cursor: pointer;
+    background-color: hsla(0deg, 0%, 0%, 0.4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .modal__body {
+    padding: 5px;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .modal__closer {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: var(--error-color);
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
+
+:global {
+  .modal-scvig-exit {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  .modal-scvig-exit-active {
+    opacity: 0;
+    transform: scale(0.25) translateY(-50%);
+    visibility: hidden;
+  }
+
+  .modal-scvig-enter {
+    opacity: 0;
+    transform: scale(0.25) translateY(-50%);
+  }
+  .modal-scvig-enter-active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    visibility: visible;
+  }
+
+  .modal-scvig-enter-done {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+  }
+}

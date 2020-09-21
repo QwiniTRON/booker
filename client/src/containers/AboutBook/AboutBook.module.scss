@@ -1,0 +1,119 @@
+.about-book {
+  .about-book__body {
+  }
+}
+
+.info {
+  display: grid;
+  grid-template: auto/ repeat(2, 1fr);
+  gap: 0 5px;
+
+  .info__photo {
+    img {
+      width: 100%;
+    }
+  }
+
+  .info__data {
+    font-size: 16px;
+    border-left: 4px solid var(--main-color);
+    padding-left: 10px;
+
+    .info__item {
+      span {
+        margin-right: 5px;
+
+        svg {
+          width: 20px;
+        }
+      }
+    }
+
+    .info__name {
+      margin: 15px 0;
+    }
+
+    .info__category {
+      margin: 10px 0;
+
+      span {
+        color: #3498db;
+        font-weight: 900;
+      }
+    }
+
+    .info__author {
+      margin: 10px 0;
+
+      a {
+        color: #3498DB;
+        text-decoration: none;
+      }
+
+      span {
+        color: #229954;
+      }
+    }
+
+    .info__like {
+      margin: 10px 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 18px;
+      vertical-align: baseline;
+    }
+
+    .info__createdate {
+      margin: 10px 0;
+
+      span {
+        color: #5dade2;
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.likeblock {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  box-shadow: 0 0 3px 0 #000;
+  color: #f1948a;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s, font-size 0.3s;
+  vertical-align: baseline;
+
+  &:hover {
+    box-shadow: 0 0 6px 0 #000;
+  }
+
+  &.liked {
+    box-shadow: 0 0 1px 0 #000;
+    color: #cb4335;
+    font-size: 24px;
+  }
+  &:active {
+    box-shadow: 0 0 10px 0 red;
+    color: #78281f;
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    display: grid;
+    grid-template: auto/auto;
+    gap: 5px 0;
+  }
+}

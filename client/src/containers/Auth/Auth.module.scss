@@ -1,0 +1,30 @@
+.server-error {
+  text-align: center;
+  color: var(--error-color);
+  font-size: 16px;
+}
+
+.server-succes {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 16px;
+}
+
+.main-title {
+  text-align: center;
+  color: var(--back-color);
+}
+
+.auth {
+  width: 50vw;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media(max-width: 768px) {
+  .auth {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}

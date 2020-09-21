@@ -1,0 +1,143 @@
+.card {
+  &__info {
+    background-color: #e5e7e9;
+    border-radius: 6px 6px 0 0;
+    z-index: 1;
+    position: relative;
+    transition: top 0.3s;
+    padding: 2px 4px;
+    top: -45px;
+    margin-bottom: -44px;
+  }
+
+  &__author {
+    word-break: break-all;
+    span {
+      color: var(--main-color);
+      margin-right: 5px;
+    }
+  }
+
+  &__date {
+    span {
+      color: #884ea0;
+      margin-right: 5px;
+    }
+  }
+
+  &__likes {
+    span {
+      color: #ec7063;
+      margin-right: 5px;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 16px;
+    color: #34495e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 3px;
+  }
+
+  &__description {
+    background-color: #ccc;
+    border-radius: 6px;
+    padding: 4px;
+    padding-bottom: 8px;
+    word-break: break-all;
+    position: relative;
+    z-index: 1;
+    top: -19px;
+    transition: top .3s;
+    height: 80px;
+
+    &:hover + div {
+      top: -19px;
+    }
+  }
+
+  &__main-link {
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+
+    &--img {
+      &:hover + div {
+        top: -4px;
+      }
+    }
+  }
+
+  &__sub-link {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background-color: #2e86c1;
+    border-radius: 0 0 6px 6px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #08f;
+  }
+
+  &__img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px 6px 0 0;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    &__info {
+      background-color: #e5e7e9;
+      border-radius: 6px 6px 0 0;
+      z-index: 1;
+      position: relative;
+      transition: top 0.3s;
+      padding: 2px 4px;
+      top: -30px;
+      margin-bottom: -30px;
+    }
+
+    &__description {
+      top: -16px;
+      transition: top 0.3s;
+
+      &:hover + div {
+        top: -15px;
+      }
+    }
+
+    &__main-link {
+      padding: 0;
+      margin: 0;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+
+      &--img {
+        &:hover + div {
+          top: -4px;
+        }
+      }
+    }
+  }
+}

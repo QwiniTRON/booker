@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var config = require("config");
+var pgPromise = require("pg-promise");
+var dbPort = config.get('db.port');
+var dbName = config.get('db.name');
+var dbPassword = config.get('db.password');
+var dbHost = config.get('db.host');
+var dbDatabase = config.get('db.database');
+var pgp = pgPromise();
+var db = pgp("postgres://" + dbName + ":" + dbPassword + "@" + dbHost + ":" + dbPort + "/" + dbDatabase);
+exports.default = db;

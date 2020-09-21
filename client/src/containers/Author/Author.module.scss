@@ -1,0 +1,34 @@
+.author {
+  .author__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  }
+
+  .description {
+    padding-bottom: 5px;
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .photo {
+    width: 40vw;
+    margin: 15px auto;
+
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+.wrapper {
+  width: 80vw;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

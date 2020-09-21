@@ -1,0 +1,15 @@
+{
+  "express": {
+    "PORT": 4200
+  },
+  "jwtSecret": "e1msajshqd80000",
+  "jwtAccessTokenLife": 3600000,
+  "jwtRefreshTokenLife": 86400000,
+  "db": {
+    "port": "5432",
+    "name": "postgres",
+    "password": "123456789",
+    "host": "localhost",
+    "database": "booker"
+  }
+}
